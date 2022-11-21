@@ -1,0 +1,26 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+    <div>
+        <h1>{{title}}</h1>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="/rappers/{{id}}/image">Фото</a>
+            </li>
+            <li class="nav-item"> 
+                <a class="nav-link" href="/rappers/{{id}}/info">Об артисте</a>
+            </li>    
+        </ul>
+        {% block objectContent %}
+ 
+        {% endblock %}
+    </div>
+{% endblock %}
+
+
+
+{# <div>
+    {% for item in menu %}
+        <a href="{{item.url}}" class="{{ title == item.title ? 'active' }}">{{item.title}}</a>
+    {% endfor %}
+</div> #}

@@ -1,0 +1,25 @@
+.body {
+    font-family: 'Roboto';
+}
+
+/* a.active {
+    background-color: rgb(216, 37, 37);
+} */
+
+.p-2 {
+    color: #ff0000;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    font-size: 1px;
+}
+
+.icon {
+    background: url(rap.svg);
+}
+
+.main-text {
+    font-size: 1em;
+}

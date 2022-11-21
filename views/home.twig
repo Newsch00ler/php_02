@@ -1,0 +1,102 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+        <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-weight: bold;">Главная страница</h1>
+        <h4 style="font-family: 'Lucida Console', 'Courier New', monospace;">Приветствуем Вас на дрилле</h4>
+
+        <ul class="nav nav-pills">
+            <div class="row" style="padding-left: 0px;">
+                {% for object in rappers %}
+                    <div class="card text-center" style="width: 300px; border-radius: 25px; --bs-card-border-width: 0px;">
+                        <a href="/rappers/{{object.id}}">
+                            <img class="scale" src="{{object.image}}" alt="" style="border-radius: 25px; width: 300px;">
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-family: 'Lucida Console', 'Courier New', monospace;">{{object.title}}</h4>  
+                            <p class="card-text" style="font-family: 'Lucida Console', 'Courier New', monospace;">{{object.description}}</p>
+                            <div style="display: flex; justify-content: space-evenly;">
+                                <a href="/rappers/{{object.id}}/image" class="button">Фото</a>
+                                <a href="/rappers/{{object.id}}/info" class="button">Об артисте</a>
+                            </div>
+                        </div>
+                    </div>
+                    {# <div class="col-4">
+                        <img src="{{ object.image}}" alt="" style="border-radius: 25px; width: 300px;"> style="align-content: center"
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <img src="{{ object.image}}" alt="" style="border-radius: 25px; width: 300px;">
+                            </a>
+                        </li>
+                        <div class="row">
+                            <span style="text-align: center" href="">{{object.title}}</span>
+                        </div>
+                        <div class="row" style="text-align: center">
+                            <div class="col-6">
+                                <a class="nav-link" href="">
+                                    Фото
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="nav-link" href="">
+                                    Об артисте
+                                </a>
+                            </div>
+                        </div>
+                    </div> #}
+                {% endfor %}
+                {# <div class="col" style="width: 600px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/asaprocky">
+                            A$AP Rocky
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/playboicarti">
+                            Playboi Carti
+                        </a>
+                    </li>        
+                    <li class="nav-item">
+                        <a class="nav-link" href="/travisscott">
+                            Travis Scott
+                        </a>
+                    </li> 
+                </div>
+        
+                <div class="col">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/asaprocky/image">
+                            Фото
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/playboicarti/image">
+                            Фото
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/travisscott/image">
+                            Фото
+                        </a>
+                    </li>
+                </div>
+        
+                <div class="col">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/asaprocky/info">
+                            Об артисте
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/playboicarti/info">
+                            Об артисте
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/travisscott/info">
+                            Об артисте
+                        </a>
+                    </li>
+                </div> #}
+            </div>
+        </ul>
+{% endblock %}
